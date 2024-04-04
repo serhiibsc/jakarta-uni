@@ -2,6 +2,7 @@ package com.example.jakartauni.rest;
 
 import com.example.jakartauni.currency.Currency;
 import com.example.jakartauni.currency.CurrencyService;
+import com.example.jakartauni.rest.dto.ResponseMessageDto;
 import jakarta.ejb.EJB;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -18,9 +19,7 @@ public class CurrencyResource {
     public Response getCurrency(@PathParam("currencyId") Long currencyId) {
         return currencyService.findCurrencyById(currencyId)
                 .map(Response::ok)
-                .orElse(Response.status(Response.Status.NOT_FOUND)
-                        .entity(String.format("{\"error\": \"Currency with id [%d] not found.\"}",
-                                currencyId)))
+                .orElse(responseCurrencyNotFound(currencyId))
                 .build();
     }
 
@@ -29,17 +28,19 @@ public class CurrencyResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response addCurrency(Currency currency) {
         if (currencyService.findCurrencyByName(currency.getName()).isPresent()) {
+            String message = String.format("Currency with name [%s] already exists.",
+                    currency.getAbbreviation());
+            ResponseMessageDto messageDto = ResponseMessageDto.builder().message(message).build();
             return Response.status(Response.Status.CONFLICT)
-                    .entity(String.format("{\"conflict\": \"Currency with name [%s] already " +
-                                    "exists.\"}",
-                            currency.getName()))
+                    .entity(messageDto)
                     .build();
         }
         if (currencyService.findCurrencyByAbbreviation(currency.getAbbreviation()).isPresent()) {
+            String message = String.format("Currency with abbreviation [%s] already exists.",
+                    currency.getAbbreviation());
+            ResponseMessageDto messageDto = ResponseMessageDto.builder().message(message).build();
             return Response.status(Response.Status.CONFLICT)
-                    .entity(String.format("{\"conflict\": \"Currency with abbreviation [%s] " +
-                                    "already exists.\"}",
-                            currency.getAbbreviation()))
+                    .entity(messageDto)
                     .build();
         }
         currencyService.createCurrency(currency);
@@ -53,8 +54,10 @@ public class CurrencyResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateCurrency(@PathParam("id") Long id, Currency updatedCurrency) {
         if (updatedCurrency.getName() == null || updatedCurrency.getAbbreviation() == null) {
+            String message = "Currency should have name and abbreviation";
+            ResponseMessageDto messageDto = ResponseMessageDto.builder().message(message).build();
             return Response.status(Response.Status.BAD_REQUEST)
-                    .entity("{\"error\": \"Currency should have name and abbreviation.\"}")
+                    .entity(messageDto)
                     .build();
         }
         return currencyService.findCurrencyById(id)
@@ -62,9 +65,7 @@ public class CurrencyResource {
                     currencyService.updateCurrency(id, updatedCurrency);
                     return Response.ok().entity(currencyService.findCurrencyById(id));
                 })
-                .orElse(Response.status(Response.Status.NOT_FOUND)
-                        .entity(String.format("{\"error\": \"Currency with id [%d] not found.\"}",
-                                id)))
+                .orElse(responseCurrencyNotFound(id))
                 .build();
     }
 
@@ -77,9 +78,14 @@ public class CurrencyResource {
                     currencyService.deleteCurrency(existingCurrency);
                     return Response.noContent();
                 })
-                .orElse(Response.status(Response.Status.NOT_FOUND)
-                        .entity(String.format("{\"error\": \"Currency with id [%d] not found.\"}",
-                                id)))
+                .orElse(responseCurrencyNotFound(id))
                 .build();
+    }
+
+    private static Response.ResponseBuilder responseCurrencyNotFound(Long currencyId) {
+        String message = String.format("Currency with id [%d] not found", currencyId);
+        ResponseMessageDto messageDto = ResponseMessageDto.builder().message(message).build();
+        return Response.status(Response.Status.NOT_FOUND)
+                .entity(messageDto);
     }
 }
