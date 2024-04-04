@@ -123,7 +123,7 @@
             }),
             headers: new Headers({ 'content-type': 'application/json' }),
         });
-        // window.location.reload();
+        window.location.reload();
     };
 </script>
 </body>
