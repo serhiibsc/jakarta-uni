@@ -22,8 +22,8 @@
                     <c:if test="${sessionScope.user.role.name.equals('admin')}">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                               href="${pageContext.request.contextPath}/controller?command=create_currency">
-                                Create currency
+                               href="${pageContext.request.contextPath}/controller?command=currencies">
+                                Currencies
                             </a>
                         </li>
                     </c:if>
