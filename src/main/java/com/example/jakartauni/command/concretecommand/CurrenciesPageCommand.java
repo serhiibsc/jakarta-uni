@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Stateless(name = "CurrenciesPageCommand")
-public class CurrenciesPageCommand implements Command {
+public final class CurrenciesPageCommand implements Command {
     @EJB
     private CurrencyService currencyService;
 

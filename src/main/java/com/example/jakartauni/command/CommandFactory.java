@@ -19,7 +19,7 @@ public class CommandFactory {
     public void init() {
         try {
             InitialContext ic = new InitialContext();
-            commands.add((Command) ic.lookup("java:module/ExchangeRateSpecificCommand"));
+            commands.add((Command) ic.lookup("java:module/ExchangeRatePeriodCommand"));
             commands.add((Command) ic.lookup("java:module/LoginCommand"));
             commands.add((Command) ic.lookup("java:module/LoginPageCommand"));
             commands.add((Command) ic.lookup("java:module/MainPageCommand"));

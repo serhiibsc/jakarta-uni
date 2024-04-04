@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Stateless(name = "LoginCommand")
-public class LoginCommand implements Command {
+public final class LoginCommand implements Command {
     @EJB
     private UserService userService;
 

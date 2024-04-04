@@ -16,10 +16,10 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
-import static com.example.jakartauni.command.CommandName.CURRENCY_DASHBOARD;
+import static com.example.jakartauni.command.CommandName.EXCHANGE_RATE_PERIOD;
 
-@Stateless(name = "CurrencyDashboardCommand")
-public final class CurrencyDashboardCommand implements Command {
+@Stateless(name = "ExchangeRatePeriodCommand")
+public final class ExchangeRatePeriodCommand implements Command {
     @EJB
     private ExchangeRateService exchangeRateService;
     @EJB
@@ -39,11 +39,11 @@ public final class CurrencyDashboardCommand implements Command {
         req.setAttribute("sourceCurrency", sourceCurrency);
         req.setAttribute("exchangeRates", exchangeRates);
 
-        req.getRequestDispatcher("/WEB-INF/jsp/currencyDashboard.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/exchangeRatePeriod.jsp").forward(req, resp);
     }
 
     @Override
     public CommandName getCommandName() {
-        return CURRENCY_DASHBOARD;
+        return EXCHANGE_RATE_PERIOD;
     }
 }

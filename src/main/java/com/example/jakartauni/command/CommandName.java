@@ -5,8 +5,7 @@ public enum CommandName {
     LOGIN_PAGE,
     LOGOUT,
     MAIN_PAGE,
-    CURRENCY_DATA,
     CURRENCIES,
-    CURRENCY_DASHBOARD,
+    EXCHANGE_RATE_PERIOD,
     UNKNOWN
 }

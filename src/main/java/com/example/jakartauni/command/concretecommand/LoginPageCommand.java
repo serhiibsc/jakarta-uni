@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Stateless(name = "LoginPageCommand")
-public class LoginPageCommand implements Command {
+public final class LoginPageCommand implements Command {
 
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp)

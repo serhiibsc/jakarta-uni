@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import static com.example.jakartauni.command.CommandName.MAIN_PAGE;
 
 @Stateless(name = "MainPageCommand")
-public class MainPageCommand implements Command {
+public final class MainPageCommand implements Command {
     @EJB
     private ExchangeRateService exchangeRateService;
 

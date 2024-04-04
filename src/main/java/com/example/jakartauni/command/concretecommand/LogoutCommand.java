@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Stateless(name = "LogoutCommand")
-public class LogoutCommand implements Command {
+public final class LogoutCommand implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
