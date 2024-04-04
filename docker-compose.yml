@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    ports:
+      - 5433:5432
+#    volumes:
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: postgres -c wal_level=logical
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: jakartauni

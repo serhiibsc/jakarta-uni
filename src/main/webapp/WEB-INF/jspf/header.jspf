@@ -4,7 +4,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="${pageContext.request.contextPath}/app?command=main_page">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/controller?command=main_page">
                 Currency, currency, currency</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -22,7 +22,7 @@
                     <c:if test="${sessionScope.user.role.name.equals('admin')}">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                               href="${pageContext.request.contextPath}/app?command=create_currency">
+                               href="${pageContext.request.contextPath}/controller?command=create_currency">
                                 Create currency
                             </a>
                         </li>
@@ -37,7 +37,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
-                                   href="${pageContext.request.contextPath}/app?command=logout">
+                                   href="${pageContext.request.contextPath}/controller?command=logout">
                                     Logout
                                 </a>
                             </li>
@@ -45,7 +45,7 @@
                         <c:otherwise>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
-                                   href="${pageContext.request.contextPath}/app?command=login_page">
+                                   href="${pageContext.request.contextPath}/controller?command=login_page">
                                     Login
                                 </a>
                             </li>

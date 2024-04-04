@@ -29,7 +29,7 @@ public class LoginCommand implements Command {
             req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
             return;
         }
-        if (!login.matches("[a-zA-Z0-9]{3,10}")) {
+        if (!login.matches("[a-zA-Z0-9\\-]{3,10}")) {
             req.setAttribute("errorMessage", "Login is suspicious!");
             req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
             return;
@@ -43,7 +43,7 @@ public class LoginCommand implements Command {
         }
 
         req.getSession().setAttribute("user", user);
-        resp.sendRedirect(req.getContextPath() + "/app?command=main_page");
+        resp.sendRedirect(req.getContextPath() + "/controller?command=main_page");
     }
 
     @Override

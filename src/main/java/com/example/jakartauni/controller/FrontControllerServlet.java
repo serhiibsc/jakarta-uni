@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/app")
+@WebServlet(urlPatterns = "/controller")
 public class FrontControllerServlet extends HttpServlet {
     @EJB
     private CommandFactory commandFactory;

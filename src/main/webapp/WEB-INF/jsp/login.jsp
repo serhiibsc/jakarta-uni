@@ -22,7 +22,7 @@
             </div>
         </c:if>
     </div>
-    <form action="${pageContext.request.contextPath}/app?command=login" method="post" class="mx-auto"
+    <form action="${pageContext.request.contextPath}/controller?command=login" method="post" class="mx-auto"
           style="max-width: 480px;">
         <input type="hidden" name="command" value="login">
         <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
@@ -45,7 +45,7 @@
 
     <div class="mt-3 mb-3 d-grid" style="max-width: 480px;margin: auto">
         <a class="btn btn-sm btn-secondary btn-block"
-           href="${pageContext.request.contextPath}/app?command=register_page" role="button">Register</a>
+           href="${pageContext.request.contextPath}/controller?command=register_page" role="button">Register</a>
     </div>
 </div>
 <%@ include file="/WEB-INF/jspf/bootstrapScripts.jspf" %>
