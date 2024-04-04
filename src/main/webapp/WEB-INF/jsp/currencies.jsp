@@ -41,6 +41,7 @@
                             width="32"
                             height="32"
                             style="cursor: pointer"
+                            onclick="handleDeleteCurrency('${currency.id}')"
                     />
                 </td>
             </tr>
@@ -88,6 +89,9 @@
 
         const submitButton = document.getElementById('submit-button');
         submitButton.style.display = submitButton.style.display === 'none' ? 'block' : 'none';
+
+        document.getElementById('name').value = '';
+        document.getElementById('abbreviation').value = '';
     };
 
     const toggleEditForm = (id, name, abbreviation) => {
@@ -121,6 +125,14 @@
                 name: document.getElementById('name').value,
                 abbreviation: document.getElementById('abbreviation').value,
             }),
+            headers: new Headers({ 'content-type': 'application/json' }),
+        });
+        window.location.reload();
+    };
+
+    const handleDeleteCurrency = async id => {
+        await fetch('http://localhost:8080/jakarta-uni-1.0-SNAPSHOT/api/currency/' + id, {
+            method: 'DELETE',
             headers: new Headers({ 'content-type': 'application/json' }),
         });
         window.location.reload();
