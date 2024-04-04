@@ -4,7 +4,9 @@ import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
 
+import java.util.List;
 import java.util.Optional;
 
 @Stateless
@@ -28,6 +30,12 @@ public class CurrencyRepository {
         } catch (NoResultException ex) {
             return Optional.empty();
         }
+    }
+
+    public List<Currency> findAll() {
+        TypedQuery<Currency> query = entityManager.createQuery(
+                "SELECT e FROM Currency e", Currency.class);
+        return query.getResultList();
     }
 
     public void delete(Long currencyId) {
