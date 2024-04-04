@@ -7,6 +7,7 @@ apache-tomee-plume-9.1.2
 
 ### IntelliJ IDEA ###
 .idea
+jakarta-uni.iml
 
 ### Mac OS ###
 .DS_Store
