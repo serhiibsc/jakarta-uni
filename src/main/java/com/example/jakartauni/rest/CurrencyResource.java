@@ -57,20 +57,6 @@ public class CurrencyResource {
                     .entity("{\"error\": \"Currency should have name and abbreviation.\"}")
                     .build();
         }
-        if (currencyService.findCurrencyByName(updatedCurrency.getName()).isPresent()) {
-            return Response.status(Response.Status.CONFLICT)
-                    .entity(String.format("{\"conflict\": \"Currency with name [%s] already " +
-                                    "exists.\"}",
-                            updatedCurrency.getName()))
-                    .build();
-        }
-        if (currencyService.findCurrencyByAbbreviation(updatedCurrency.getAbbreviation()).isPresent()) {
-            return Response.status(Response.Status.CONFLICT)
-                    .entity(String.format("{\"conflict\": \"Currency with abbreviation [%s] " +
-                                    "already exists.\"}",
-                            updatedCurrency.getAbbreviation()))
-                    .build();
-        }
         return currencyService.findCurrencyById(id)
                 .map(c -> {
                     currencyService.updateCurrency(id, updatedCurrency);

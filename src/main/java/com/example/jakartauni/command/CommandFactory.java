@@ -19,13 +19,12 @@ public class CommandFactory {
     public void init() {
         try {
             InitialContext ic = new InitialContext();
-            commands.add((Command) ic.lookup("java:module/CurrencyDashboardCommand"));
+            commands.add((Command) ic.lookup("java:module/ExchangeRateSpecificCommand"));
             commands.add((Command) ic.lookup("java:module/LoginCommand"));
             commands.add((Command) ic.lookup("java:module/LoginPageCommand"));
             commands.add((Command) ic.lookup("java:module/MainPageCommand"));
             commands.add((Command) ic.lookup("java:module/LogoutCommand"));
             commands.add((Command) ic.lookup("java:module/CurrenciesPageCommand"));
-            commands.add((Command) ic.lookup("java:module/CurrencyDataCommand"));
         } catch (NamingException e) {
             throw new IllegalStateException(e);
         }

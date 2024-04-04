@@ -31,6 +31,7 @@ public class ExchangeRate implements Serializable {
     @JoinColumn(name = "target_currency_id", referencedColumnName = "id")
     private Currency targetCurrency;
 
+    @Column(precision = 15, scale = 2)
     private BigDecimal rate;
 
     private LocalDate date;
