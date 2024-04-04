@@ -25,6 +25,7 @@ public class CommandFactory {
             commands.add((Command) ic.lookup("java:module/MainPageCommand"));
             commands.add((Command) ic.lookup("java:module/LogoutCommand"));
             commands.add((Command) ic.lookup("java:module/CurrenciesPageCommand"));
+            commands.add((Command) ic.lookup("java:module/CurrencyDataCommand"));
         } catch (NamingException e) {
             throw new IllegalStateException(e);
         }
