@@ -20,11 +20,11 @@
         <c:forEach items="${currencies}" var="currency">
             <tr>
                 <td style="font-size: 20px; padding: 16px 32px; text-align: center">
-                    <a href="${pageContext.request.contextPath}/controller?command=currency_data&currencyId=${currency.id}" style="color: black">
-                            ${currency.name}
-                    </a>
+                    <c:out value="${currency.name}"/>
                 </td>
-                <td style="font-size: 20px; padding: 16px 32px; text-align: center">${currency.abbreviation}</td>
+                <td style="font-size: 20px; padding: 16px 32px; text-align: center">
+                    <c:out value="${currency.abbreviation}"/>
+                </td>
                 <td style="font-size: 20px; padding: 16px 32px; text-align: center">
                     <img
                             src="${pageContext.request.contextPath}/assets/pencil.png"
@@ -32,7 +32,7 @@
                             width="32"
                             height="32"
                             style="cursor: pointer"
-                            onclick="toggleEditForm('${currency.id}', '${currency.name}', '${currency.abbreviation}')"
+                            onclick="toggleEditForm('<c:out value="${currency.id}"/>', '<c:out value="${currency.name}"/>', '<c:out value="${currency.abbreviation}"/>')"
                     />
                     <span style="font-size: 32px; margin: 10px">|</span>
                     <img
@@ -41,7 +41,7 @@
                             width="32"
                             height="32"
                             style="cursor: pointer"
-                            onclick="handleDeleteCurrency('${currency.id}')"
+                            onclick="handleDeleteCurrency('<c:out value="${currency.id}"/>')"
                     />
                 </td>
             </tr>
@@ -52,12 +52,14 @@
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 20px">
     <form style="display: none" id="add-currency-form">
         <div class="form-group">
-                <label for="name" class="mb-1 text-center">Name</label>
-                <input type="text" id="name" class="form-control mb-1" style="width: 400px" placeholder="Name" name="name" required autofocus>
+            <label for="name" class="mb-1 text-center">Name</label>
+            <input type="text" id="name" class="form-control mb-1" style="width: 400px" placeholder="Name" name="name"
+                   required autofocus>
         </div>
         <div class="form-group mt-3">
-                <label for="abbreviation" class="mb-1 text-center">Abbreviation</label>
-                <input type="text" id="abbreviation" class="form-control mb-1" style="width: 400px" placeholder="Abbreviation" name="abbreviation" required autofocus>
+            <label for="abbreviation" class="mb-1 text-center">Abbreviation</label>
+            <input type="text" id="abbreviation" class="form-control mb-1" style="width: 400px"
+                   placeholder="Abbreviation" name="abbreviation" required autofocus>
         </div>
     </form>
     <div id="buttons" style="display: flex; gap: 10px; margin-top: 10px">
@@ -125,7 +127,7 @@
                 name: document.getElementById('name').value,
                 abbreviation: document.getElementById('abbreviation').value,
             }),
-            headers: new Headers({ 'content-type': 'application/json' }),
+            headers: new Headers({'content-type': 'application/json'}),
         });
         window.location.reload();
     };
@@ -133,7 +135,7 @@
     const handleDeleteCurrency = async id => {
         await fetch('http://localhost:8080/jakarta-uni-1.0-SNAPSHOT/api/currency/' + id, {
             method: 'DELETE',
-            headers: new Headers({ 'content-type': 'application/json' }),
+            headers: new Headers({'content-type': 'application/json'}),
         });
         window.location.reload();
     };
