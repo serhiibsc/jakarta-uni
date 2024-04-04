@@ -1,0 +1,60 @@
+<%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/app?command=main_page">
+                Currency, currency, currency</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">
+                            <c:out value="${sessionScope.user.role}"/>
+                        </a>
+                    </li>
+
+                    <c:if test="${sessionScope.user.role.name.equals('admin')}">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                               href="${pageContext.request.contextPath}/app?command=create_currency">
+                                Create currency
+                            </a>
+                        </li>
+                    </c:if>
+
+                    <c:choose>
+                        <c:when test="${sessionScope.user.role.name.equals('admin')}">
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">
+                                    Logged in as: <c:out value="${sessionScope.user.login}"/>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                   href="${pageContext.request.contextPath}/app?command=logout">
+                                    Logout
+                                </a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                   href="${pageContext.request.contextPath}/app?command=login_page">
+                                    Login
+                                </a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
