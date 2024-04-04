@@ -34,7 +34,7 @@ public class LoginCommand implements Command {
             req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
             return;
         }
-        User user = userService.findUserByUsername(login);
+        User user = userService.findByUsername(login);
 
         if (user == null || !user.getPassword().equals(Encryptor.encryptSha256(password))) {
             req.setAttribute("errorMessage", "Invalid login or password.");

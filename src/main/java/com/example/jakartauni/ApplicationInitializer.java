@@ -18,7 +18,7 @@ public class ApplicationInitializer {
 
     @PostConstruct
     public void onStartup() {
-        User user = userService.findUserByUsername("jaka-admin");
+        User user = userService.findByUsername("jaka-admin");
         if (Objects.isNull(user)) {
             userService.createDefaultAdmin();
         }
