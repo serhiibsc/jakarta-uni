@@ -1,0 +1,236 @@
+04-Apr-2024 00:47:48.287 INFO [main] org.apache.openejb.persistence.PersistenceBootstrap.getDefaultProvider Default JPA Provider changed to org.eclipse.persistence.jpa.PersistenceProvider specified by jar:file:/Users/serhiibasik/apache-tomee-plume-9.1.2/lib/openejb-core-eclipselink-9.1.2.jar!/META-INF/org.apache.openejb.persistence.PersistenceBootstrap.provider
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke Server version name:   Apache Tomcat (TomEE)/10.0.27 (9.1.2)
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke Server built:          Oct 3 2022 14:18:31 UTC
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke Server version number: 10.0.27.0
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke OS Name:               Mac OS X
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke OS Version:            14.3.1
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke Architecture:          aarch64
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke Java Home:             /Users/serhiibasik/Library/Java/JavaVirtualMachines/openjdk-20/Contents/Home
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke JVM Version:           20+36-2344
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke JVM Vendor:            Oracle Corporation
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke CATALINA_BASE:         /Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:47:48.419 INFO [main] java.lang.reflect.Method.invoke CATALINA_HOME:         /Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djava.util.logging.config.file=/Users/serhiibasik/apache-tomee-plume-9.1.2/conf/logging.properties
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: -javaagent:/Users/serhiibasik/apache-tomee-plume-9.1.2/lib/openejb-javaagent.jar
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Apr-2024 00:47:48.420 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Apr-2024 00:47:48.421 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Apr-2024 00:47:48.421 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Dignore.endorsed.dirs=
+04-Apr-2024 00:47:48.421 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Dcatalina.base=/Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:47:48.421 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Dcatalina.home=/Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:47:48.421 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djava.io.tmpdir=/Users/serhiibasik/apache-tomee-plume-9.1.2/temp
+04-Apr-2024 00:47:48.425 INFO [main] java.lang.reflect.Method.invoke The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/serhiibasik/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+04-Apr-2024 00:47:48.646 INFO [main] java.lang.reflect.Method.invoke Initializing ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:47:48.747 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> OpenEJB http://tomee.apache.org/
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Startup: Thu Apr 04 00:47:48 EEST 2024
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Copyright 1999-2021 (C) Apache TomEE Project, All Rights Reserved.
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Version: 9.1.2
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build date: 20231212
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build time: 04:08
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.home = /Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:47:48.793 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.base = /Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:47:48.794 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@5b6ec132
+04-Apr-2024 00:47:48.796 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Succeeded in installing singleton service
+04-Apr-2024 00:47:48.808 INFO [main] org.apache.openejb.config.ConfigurationFactory.init TomEE configuration file is '/Users/serhiibasik/apache-tomee-plume-9.1.2/conf/tomee.xml'
+04-Apr-2024 00:47:48.822 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+04-Apr-2024 00:47:48.823 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+04-Apr-2024 00:47:48.823 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.deployments.classpath=false'
+04-Apr-2024 00:47:48.832 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating TransactionManager(id=Default Transaction Manager)
+04-Apr-2024 00:47:48.858 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating SecurityService(id=Tomcat Security Service)
+04-Apr-2024 00:47:48.896 INFO [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf)
+04-Apr-2024 00:47:48.987 INFO [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf-rs)
+04-Apr-2024 00:47:49.010 INFO [main] org.apache.openejb.server.SimpleServiceManager.start   ** Bound Services **
+04-Apr-2024 00:47:49.010 INFO [main] org.apache.openejb.server.SimpleServiceManager.printRow   NAME                 IP              PORT  
+04-Apr-2024 00:47:49.010 INFO [main] org.apache.openejb.server.SimpleServiceManager.start -------
+04-Apr-2024 00:47:49.010 INFO [main] org.apache.openejb.server.SimpleServiceManager.start Ready!
+04-Apr-2024 00:47:49.010 INFO [main] java.lang.reflect.Method.invoke Server initialization in [699] milliseconds
+04-Apr-2024 00:47:49.034 INFO [main] org.apache.tomee.catalina.OpenEJBNamingContextListener.bindResource Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+04-Apr-2024 00:47:49.034 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=UserDatabase)
+04-Apr-2024 00:47:49.042 INFO [main] java.lang.reflect.Method.invoke Starting service [Catalina]
+04-Apr-2024 00:47:49.042 INFO [main] java.lang.reflect.Method.invoke Starting Servlet engine: [Apache Tomcat (TomEE)/10.0.27 (9.1.2)]
+04-Apr-2024 00:47:49.046 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs]
+04-Apr-2024 00:47:49.050 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /docs
+04-Apr-2024 00:47:49.117 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs
+04-Apr-2024 00:47:49.137 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs" loaded.
+04-Apr-2024 00:47:49.142 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs
+04-Apr-2024 00:47:49.182 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+04-Apr-2024 00:47:49.197 WARNING [main] org.apache.batchee.container.services.ServicesManager.init You didn't specify org.apache.batchee.jmx.application and JMX is already registered, skipping
+04-Apr-2024 00:47:49.197 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs)
+04-Apr-2024 00:47:49.266 INFO [main] org.apache.tomee.microprofile.openapi.MicroProfileOpenApiRegistration.onStartup Registering OpenAPI servlet on /openapi for application /docs
+04-Apr-2024 00:47:49.306 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Apr-2024 00:47:49.414 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs] has finished in [368] ms
+04-Apr-2024 00:47:49.414 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager]
+04-Apr-2024 00:47:49.415 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /manager
+04-Apr-2024 00:47:49.432 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager
+04-Apr-2024 00:47:49.436 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager" loaded.
+04-Apr-2024 00:47:49.436 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager
+04-Apr-2024 00:47:49.438 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+04-Apr-2024 00:47:49.440 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager/META-INF/context.xml
+04-Apr-2024 00:47:49.440 WARNING [main] org.apache.batchee.container.services.ServicesManager.init You didn't specify org.apache.batchee.jmx.application and JMX is already registered, skipping
+04-Apr-2024 00:47:49.440 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager)
+04-Apr-2024 00:47:49.456 INFO [main] org.apache.tomee.microprofile.openapi.MicroProfileOpenApiRegistration.onStartup Registering OpenAPI servlet on /openapi for application /manager
+04-Apr-2024 00:47:49.482 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Apr-2024 00:47:49.495 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager] has finished in [81] ms
+04-Apr-2024 00:47:49.495 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT]
+04-Apr-2024 00:47:49.496 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /
+04-Apr-2024 00:47:49.504 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT
+04-Apr-2024 00:47:49.505 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT" loaded.
+04-Apr-2024 00:47:49.505 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT
+04-Apr-2024 00:47:49.507 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+04-Apr-2024 00:47:49.509 WARNING [main] org.apache.batchee.container.services.ServicesManager.init You didn't specify org.apache.batchee.jmx.application and JMX is already registered, skipping
+04-Apr-2024 00:47:49.509 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT)
+04-Apr-2024 00:47:49.519 INFO [main] org.apache.tomee.microprofile.openapi.MicroProfileOpenApiRegistration.onStartup Registering OpenAPI servlet on /openapi for application 
+04-Apr-2024 00:47:49.537 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Apr-2024 00:47:49.547 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT] has finished in [51] ms
+04-Apr-2024 00:47:49.547 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager]
+04-Apr-2024 00:47:49.547 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /host-manager
+04-Apr-2024 00:47:49.557 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager
+04-Apr-2024 00:47:49.559 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager" loaded.
+04-Apr-2024 00:47:49.559 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager
+04-Apr-2024 00:47:49.561 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+04-Apr-2024 00:47:49.562 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager/META-INF/context.xml
+04-Apr-2024 00:47:49.562 WARNING [main] org.apache.batchee.container.services.ServicesManager.init You didn't specify org.apache.batchee.jmx.application and JMX is already registered, skipping
+04-Apr-2024 00:47:49.562 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager)
+04-Apr-2024 00:47:49.577 INFO [main] org.apache.tomee.microprofile.openapi.MicroProfileOpenApiRegistration.onStartup Registering OpenAPI servlet on /openapi for application /host-manager
+04-Apr-2024 00:47:49.594 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Apr-2024 00:47:49.604 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager] has finished in [57] ms
+04-Apr-2024 00:47:49.605 INFO [main] java.lang.reflect.Method.invoke Starting ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:47:49.612 INFO [main] java.lang.reflect.Method.invoke Server startup in [601] milliseconds
+04-Apr-2024 00:49:09.003 WARNING [main] java.lang.reflect.Method.invoke Invalid shutdown command [] received
+04-Apr-2024 00:51:54.218 INFO [main] java.lang.reflect.Method.invoke A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+04-Apr-2024 00:51:54.221 INFO [main] java.lang.reflect.Method.invoke Pausing ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:51:54.225 INFO [main] java.lang.reflect.Method.invoke Stopping service [Catalina]
+04-Apr-2024 00:51:54.240 INFO [main] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs
+04-Apr-2024 00:51:54.275 INFO [main] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager
+04-Apr-2024 00:51:54.293 INFO [main] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT
+04-Apr-2024 00:51:54.311 INFO [main] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager
+04-Apr-2024 00:51:54.328 INFO [main] java.lang.reflect.Method.invoke Stopping ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:51:54.341 INFO [main] org.apache.openejb.server.SimpleServiceManager.stop Stopping server services
+04-Apr-2024 00:51:54.349 INFO [main] java.lang.reflect.Method.invoke Destroying ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:52:18.813 INFO [main] org.apache.openejb.persistence.PersistenceBootstrap.getDefaultProvider Default JPA Provider changed to org.eclipse.persistence.jpa.PersistenceProvider specified by jar:file:/Users/serhiibasik/apache-tomee-plume-9.1.2/lib/openejb-core-eclipselink-9.1.2.jar!/META-INF/org.apache.openejb.persistence.PersistenceBootstrap.provider
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke Server version name:   Apache Tomcat (TomEE)/10.0.27 (9.1.2)
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke Server built:          Oct 3 2022 14:18:31 UTC
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke Server version number: 10.0.27.0
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke OS Name:               Mac OS X
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke OS Version:            14.3.1
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke Architecture:          aarch64
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke Java Home:             /Users/serhiibasik/Library/Java/JavaVirtualMachines/openjdk-20/Contents/Home
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke JVM Version:           20+36-2344
+04-Apr-2024 00:52:18.919 INFO [main] java.lang.reflect.Method.invoke JVM Vendor:            Oracle Corporation
+04-Apr-2024 00:52:18.920 INFO [main] java.lang.reflect.Method.invoke CATALINA_BASE:         /Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:52:18.920 INFO [main] java.lang.reflect.Method.invoke CATALINA_HOME:         /Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djava.util.logging.config.file=/Users/serhiibasik/apache-tomee-plume-9.1.2/conf/logging.properties
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -javaagent:/Users/serhiibasik/apache-tomee-plume-9.1.2/lib/openejb-javaagent.jar
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Dignore.endorsed.dirs=
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Dcatalina.base=/Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Dcatalina.home=/Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:52:18.921 INFO [main] java.lang.reflect.Method.invoke Command line argument: -Djava.io.tmpdir=/Users/serhiibasik/apache-tomee-plume-9.1.2/temp
+04-Apr-2024 00:52:18.926 INFO [main] java.lang.reflect.Method.invoke The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/serhiibasik/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+04-Apr-2024 00:52:19.130 INFO [main] java.lang.reflect.Method.invoke Initializing ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:52:19.223 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> OpenEJB http://tomee.apache.org/
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Startup: Thu Apr 04 00:52:19 EEST 2024
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Copyright 1999-2021 (C) Apache TomEE Project, All Rights Reserved.
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Version: 9.1.2
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build date: 20231212
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build time: 04:08
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.home = /Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:52:19.268 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.base = /Users/serhiibasik/apache-tomee-plume-9.1.2
+04-Apr-2024 00:52:19.269 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@70f02c32
+04-Apr-2024 00:52:19.271 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Succeeded in installing singleton service
+04-Apr-2024 00:52:19.283 INFO [main] org.apache.openejb.config.ConfigurationFactory.init TomEE configuration file is '/Users/serhiibasik/apache-tomee-plume-9.1.2/conf/tomee.xml'
+04-Apr-2024 00:52:19.298 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+04-Apr-2024 00:52:19.298 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+04-Apr-2024 00:52:19.299 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.deployments.classpath=false'
+04-Apr-2024 00:52:19.309 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating TransactionManager(id=Default Transaction Manager)
+04-Apr-2024 00:52:19.332 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating SecurityService(id=Tomcat Security Service)
+04-Apr-2024 00:52:19.539 INFO [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf)
+04-Apr-2024 00:52:19.620 INFO [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf-rs)
+04-Apr-2024 00:52:19.641 INFO [main] org.apache.openejb.server.SimpleServiceManager.start   ** Bound Services **
+04-Apr-2024 00:52:19.642 INFO [main] org.apache.openejb.server.SimpleServiceManager.printRow   NAME                 IP              PORT  
+04-Apr-2024 00:52:19.642 INFO [main] org.apache.openejb.server.SimpleServiceManager.start -------
+04-Apr-2024 00:52:19.642 INFO [main] org.apache.openejb.server.SimpleServiceManager.start Ready!
+04-Apr-2024 00:52:19.642 INFO [main] java.lang.reflect.Method.invoke Server initialization in [809] milliseconds
+04-Apr-2024 00:52:19.662 INFO [main] org.apache.tomee.catalina.OpenEJBNamingContextListener.bindResource Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+04-Apr-2024 00:52:19.662 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=UserDatabase)
+04-Apr-2024 00:52:19.668 INFO [main] java.lang.reflect.Method.invoke Starting service [Catalina]
+04-Apr-2024 00:52:19.668 INFO [main] java.lang.reflect.Method.invoke Starting Servlet engine: [Apache Tomcat (TomEE)/10.0.27 (9.1.2)]
+04-Apr-2024 00:52:19.672 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs]
+04-Apr-2024 00:52:19.675 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /docs
+04-Apr-2024 00:52:19.737 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs
+04-Apr-2024 00:52:19.757 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs" loaded.
+04-Apr-2024 00:52:19.760 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs
+04-Apr-2024 00:52:19.800 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+04-Apr-2024 00:52:19.814 WARNING [main] org.apache.batchee.container.services.ServicesManager.init You didn't specify org.apache.batchee.jmx.application and JMX is already registered, skipping
+04-Apr-2024 00:52:19.814 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs)
+04-Apr-2024 00:52:19.877 INFO [main] org.apache.tomee.microprofile.openapi.MicroProfileOpenApiRegistration.onStartup Registering OpenAPI servlet on /openapi for application /docs
+04-Apr-2024 00:52:19.915 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Apr-2024 00:52:20.015 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs] has finished in [343] ms
+04-Apr-2024 00:52:20.015 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager]
+04-Apr-2024 00:52:20.016 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /manager
+04-Apr-2024 00:52:20.033 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager
+04-Apr-2024 00:52:20.037 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager" loaded.
+04-Apr-2024 00:52:20.037 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager
+04-Apr-2024 00:52:20.039 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+04-Apr-2024 00:52:20.040 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager/META-INF/context.xml
+04-Apr-2024 00:52:20.040 WARNING [main] org.apache.batchee.container.services.ServicesManager.init You didn't specify org.apache.batchee.jmx.application and JMX is already registered, skipping
+04-Apr-2024 00:52:20.041 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager)
+04-Apr-2024 00:52:20.055 INFO [main] org.apache.tomee.microprofile.openapi.MicroProfileOpenApiRegistration.onStartup Registering OpenAPI servlet on /openapi for application /manager
+04-Apr-2024 00:52:20.076 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Apr-2024 00:52:20.089 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager] has finished in [74] ms
+04-Apr-2024 00:52:20.089 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT]
+04-Apr-2024 00:52:20.089 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /
+04-Apr-2024 00:52:20.097 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT
+04-Apr-2024 00:52:20.099 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT" loaded.
+04-Apr-2024 00:52:20.099 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT
+04-Apr-2024 00:52:20.101 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+04-Apr-2024 00:52:20.102 WARNING [main] org.apache.batchee.container.services.ServicesManager.init You didn't specify org.apache.batchee.jmx.application and JMX is already registered, skipping
+04-Apr-2024 00:52:20.102 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT)
+04-Apr-2024 00:52:20.111 INFO [main] org.apache.tomee.microprofile.openapi.MicroProfileOpenApiRegistration.onStartup Registering OpenAPI servlet on /openapi for application 
+04-Apr-2024 00:52:20.129 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Apr-2024 00:52:20.139 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT] has finished in [50] ms
+04-Apr-2024 00:52:20.139 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager]
+04-Apr-2024 00:52:20.139 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /host-manager
+04-Apr-2024 00:52:20.148 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager
+04-Apr-2024 00:52:20.150 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager" loaded.
+04-Apr-2024 00:52:20.151 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager
+04-Apr-2024 00:52:20.152 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+04-Apr-2024 00:52:20.154 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager/META-INF/context.xml
+04-Apr-2024 00:52:20.154 WARNING [main] org.apache.batchee.container.services.ServicesManager.init You didn't specify org.apache.batchee.jmx.application and JMX is already registered, skipping
+04-Apr-2024 00:52:20.154 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager)
+04-Apr-2024 00:52:20.167 INFO [main] org.apache.tomee.microprofile.openapi.MicroProfileOpenApiRegistration.onStartup Registering OpenAPI servlet on /openapi for application /host-manager
+04-Apr-2024 00:52:20.186 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+04-Apr-2024 00:52:20.195 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager] has finished in [56] ms
+04-Apr-2024 00:52:20.197 INFO [main] java.lang.reflect.Method.invoke Starting ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:52:20.203 INFO [main] java.lang.reflect.Method.invoke Server startup in [561] milliseconds
+04-Apr-2024 00:52:22.887 WARNING [main] java.lang.reflect.Method.invoke Invalid shutdown command [] received
+04-Apr-2024 00:53:23.301 WARNING [main] java.lang.reflect.Method.invoke Invalid shutdown command [] received
+04-Apr-2024 00:56:31.489 INFO [Thread-25] java.lang.reflect.Method.invoke Pausing ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:56:31.501 INFO [Thread-25] java.lang.reflect.Method.invoke Stopping service [Catalina]
+04-Apr-2024 00:56:31.524 INFO [Thread-25] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/docs
+04-Apr-2024 00:56:31.557 INFO [Thread-25] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/manager
+04-Apr-2024 00:56:31.577 INFO [Thread-25] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/ROOT
+04-Apr-2024 00:56:31.595 INFO [Thread-25] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /Users/serhiibasik/apache-tomee-plume-9.1.2/webapps/host-manager
+04-Apr-2024 00:56:31.612 INFO [Thread-25] java.lang.reflect.Method.invoke Stopping ProtocolHandler ["http-nio-8080"]
+04-Apr-2024 00:56:31.625 INFO [Thread-25] org.apache.openejb.server.SimpleServiceManager.stop Stopping server services
+04-Apr-2024 00:56:31.634 INFO [Thread-25] java.lang.reflect.Method.invoke Destroying ProtocolHandler ["http-nio-8080"]
