@@ -4,7 +4,6 @@ import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 @Stateless
@@ -13,6 +12,7 @@ public class CurrencyService {
     private CurrencyRepository currencyRepository;
 
     public void createCurrency(Currency currency) {
+        currency.setId(null);
         currencyRepository.save(currency);
     }
 
@@ -20,10 +20,8 @@ public class CurrencyService {
         currencyRepository.delete(currency.getId());
     }
 
-    public void updateCurrency(Currency currency) {
-        if (Objects.isNull(currency.getName())) {
-            throw new IllegalStateException();
-        }
+    public void updateCurrency(Long id, Currency currency) {
+        currency.setId(id);
         currencyRepository.save(currency);
     }
 
@@ -31,15 +29,15 @@ public class CurrencyService {
         return currencyRepository.findAll();
     }
 
-    public Currency findCurrencyByName(String currencyName) {
-        Optional<Currency> currency = currencyRepository.findByName(currencyName);
-        if (currency.isEmpty()) {
-            throw new IllegalStateException("No such a currency");
-        }
-        return currency.get();
+    public Optional<Currency> findCurrencyByName(String currencyName) {
+        return currencyRepository.findByName(currencyName);
     }
 
     public Optional<Currency> findCurrencyById(Long id) {
         return currencyRepository.find(id);
+    }
+
+    public Optional<Currency> findCurrencyByAbbreviation(String abbreviation) {
+        return currencyRepository.findByAbbreviation(abbreviation);
     }
 }

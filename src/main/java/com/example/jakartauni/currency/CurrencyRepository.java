@@ -15,12 +15,10 @@ public class CurrencyRepository {
     private EntityManager entityManager;
 
     public void save(Currency currency) {
-        Optional<Currency> optionalCurrency = findByName(currency.getName());
-        if (optionalCurrency.isEmpty()) {
+        if (currency.getId() == null || find(currency.getId()).isEmpty()) {
             entityManager.persist(currency);
             return;
         }
-        currency.setId(optionalCurrency.get().getId());
         entityManager.merge(currency);
     }
 
@@ -47,6 +45,18 @@ public class CurrencyRepository {
             String query = "SELECT c FROM Currency c WHERE c.name = :currencyName";
             Currency foundCurrency = entityManager.createQuery(query, Currency.class)
                     .setParameter("currencyName", currencyName)
+                    .getSingleResult();
+            return Optional.ofNullable(foundCurrency);
+        } catch (NoResultException ex) {
+            return Optional.empty();
+        }
+    }
+
+    public Optional<Currency> findByAbbreviation(String abbreviation) {
+        try {
+            String query = "SELECT c FROM Currency c WHERE c.abbreviation = :abbreviation";
+            Currency foundCurrency = entityManager.createQuery(query, Currency.class)
+                    .setParameter("abbreviation", abbreviation)
                     .getSingleResult();
             return Optional.ofNullable(foundCurrency);
         } catch (NoResultException ex) {

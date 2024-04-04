@@ -28,8 +28,9 @@ public final class CurrencyDashboardCommand implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        Currency targetCurrency = currencyService.findCurrencyByName(req.getParameter("target"));
-        Currency sourceCurrency = currencyService.findCurrencyByName(req.getParameter("source"));
+        Currency targetCurrency = currencyService.findCurrencyByName(req.getParameter("target")).orElseThrow();
+        Currency sourceCurrency = currencyService.findCurrencyByName(req.getParameter("source")).orElseThrow();
+
         LocalDate startDate = LocalDate.parse(req.getParameter("startDate"));
         LocalDate endDate = LocalDate.parse(req.getParameter("endDate"));
         List<ExchangeRate> exchangeRates = exchangeRateService.findAllRates(sourceCurrency, targetCurrency, startDate, endDate);
