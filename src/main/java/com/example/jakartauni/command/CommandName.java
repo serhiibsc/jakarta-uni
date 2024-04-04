@@ -6,6 +6,7 @@ public enum CommandName {
     LOGOUT,
     MAIN_PAGE,
     CURRENCY_DATA,
+    CURRENCIES,
     CURRENCY_DASHBOARD,
     UNKNOWN
 }

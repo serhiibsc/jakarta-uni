@@ -3,6 +3,7 @@ package com.example.jakartauni.currency;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -24,6 +25,10 @@ public class CurrencyService {
             throw new IllegalStateException();
         }
         currencyRepository.save(currency);
+    }
+
+    public List<Currency> findAll() {
+        return currencyRepository.findAll();
     }
 
     public Currency findCurrencyByName(String currencyName) {
