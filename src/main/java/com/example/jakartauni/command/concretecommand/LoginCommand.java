@@ -2,7 +2,7 @@ package com.example.jakartauni.command.concretecommand;
 
 import com.example.jakartauni.command.Command;
 import com.example.jakartauni.command.CommandName;
-import com.example.jakartauni.encrypt.Encryptor;
+import com.example.jakartauni.security.Encryptor;
 import com.example.jakartauni.user.User;
 import com.example.jakartauni.user.UserService;
 import jakarta.ejb.EJB;
@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Stateless(name = "LoginCommand")
 public final class LoginCommand implements Command {
@@ -34,15 +35,12 @@ public final class LoginCommand implements Command {
             req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
             return;
         }
-        User user = userService.findByUsername(login);
-
-        if (user == null || !user.getPassword().equals(Encryptor.encryptSha256(password))) {
+        Optional<User> user = userService.findByUsername(login);
+        if (user.isEmpty() || !user.get().getPassword().equals(Encryptor.encryptSha256(password))) {
             req.setAttribute("errorMessage", "Invalid login or password.");
             req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
             return;
         }
-
-        req.getSession().setAttribute("user", user);
         resp.sendRedirect(req.getContextPath() + "/controller?command=main_page");
     }
 

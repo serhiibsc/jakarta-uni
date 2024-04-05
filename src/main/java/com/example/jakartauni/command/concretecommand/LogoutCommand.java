@@ -14,7 +14,7 @@ public final class LogoutCommand implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.getSession().invalidate();
+        req.logout();
         resp.sendRedirect(req.getContextPath() + "/controller?command=main_page");
     }
 

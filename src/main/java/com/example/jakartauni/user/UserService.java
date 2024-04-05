@@ -1,15 +1,17 @@
 package com.example.jakartauni.user;
 
-import com.example.jakartauni.encrypt.Encryptor;
+import com.example.jakartauni.security.Encryptor;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
+
+import java.util.Optional;
 
 @Stateless
 public class UserService {
     @EJB
     private UserRepository userRepository;
 
-    public User findByUsername(String username) {
+    public Optional<User> findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
