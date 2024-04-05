@@ -28,8 +28,8 @@ public final class ExchangeRatePeriodCommand implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        Currency targetCurrency = currencyService.findCurrencyByName(req.getParameter("target")).orElseThrow();
-        Currency sourceCurrency = currencyService.findCurrencyByName(req.getParameter("source")).orElseThrow();
+        Currency targetCurrency = currencyService.findCurrencyByAbbreviation(req.getParameter("target")).orElseThrow();
+        Currency sourceCurrency = currencyService.findCurrencyByAbbreviation(req.getParameter("source")).orElseThrow();
 
         LocalDate startDate = LocalDate.parse(req.getParameter("startDate"));
         LocalDate endDate = LocalDate.parse(req.getParameter("endDate"));
@@ -38,6 +38,7 @@ public final class ExchangeRatePeriodCommand implements Command {
         req.setAttribute("targetCurrency", targetCurrency);
         req.setAttribute("sourceCurrency", sourceCurrency);
         req.setAttribute("exchangeRates", exchangeRates);
+        req.setAttribute("allCurrencies", currencyService.findAll());
 
         req.getRequestDispatcher("/WEB-INF/jsp/exchangeRatePeriod.jsp").forward(req, resp);
     }

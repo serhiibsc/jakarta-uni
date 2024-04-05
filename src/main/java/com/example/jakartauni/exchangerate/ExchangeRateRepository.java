@@ -13,12 +13,12 @@ public class ExchangeRateRepository {
     @PersistenceContext(unitName = "myPU")
     private EntityManager entityManager;
 
-    public void save(ExchangeRate exchangeRate) {
+    public ExchangeRate save(ExchangeRate exchangeRate) {
         if (exchangeRate.getId() == null) {
             entityManager.persist(exchangeRate);
-        } else {
-            entityManager.merge(exchangeRate);
+            return exchangeRate;
         }
+        return entityManager.merge(exchangeRate);
     }
 
     public ExchangeRate find(Long id) {
@@ -40,18 +40,21 @@ public class ExchangeRateRepository {
     }
 
     public List<ExchangeRate> findAll(LocalDate startDate, LocalDate endDate) {
-        TypedQuery<ExchangeRate> query = entityManager.createQuery("SELECT e FROM ExchangeRate e WHERE e.date BETWEEN :startDate AND :endDate", ExchangeRate.class);
+        TypedQuery<ExchangeRate> query = entityManager.createQuery("SELECT e FROM ExchangeRate e " +
+                "WHERE e.date BETWEEN :startDate AND :endDate", ExchangeRate.class);
         query.setParameter("startDate", startDate);
         query.setParameter("endDate", endDate);
         return query.getResultList();
     }
 
-    public List<ExchangeRate> findRates(String sourceCurrencyName, String targetCurrencyName, LocalDate startDate, LocalDate endDate) {
+    public List<ExchangeRate> findRates(String sourceCurrencyName, String targetCurrencyName,
+                                        LocalDate startDate, LocalDate endDate) {
         TypedQuery<ExchangeRate> query = entityManager.createQuery(
                 "SELECT e FROM ExchangeRate e " +
                         "JOIN e.sourceCurrency source " +
                         "JOIN e.targetCurrency target " +
-                        "WHERE source.name = :sourceName AND target.name = :targetName AND e.date BETWEEN :startDate AND :endDate",
+                        "WHERE source.name = :sourceName AND target.name = :targetName AND e.date" +
+                        " BETWEEN :startDate AND :endDate",
                 ExchangeRate.class);
         query.setParameter("sourceName", sourceCurrencyName);
         query.setParameter("targetName", targetCurrencyName);

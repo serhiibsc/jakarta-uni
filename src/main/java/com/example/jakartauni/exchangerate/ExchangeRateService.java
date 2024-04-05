@@ -12,8 +12,8 @@ public class ExchangeRateService {
     @EJB
     private ExchangeRateRepository exchangeRateRepository;
 
-    public void createExchangeRate(ExchangeRate exchangeRate) {
-        exchangeRateRepository.save(exchangeRate);
+    public ExchangeRate createExchangeRate(ExchangeRate exchangeRate) {
+        return exchangeRateRepository.save(exchangeRate);
     }
 
     public List<ExchangeRate> findAllRates(LocalDate date) {
