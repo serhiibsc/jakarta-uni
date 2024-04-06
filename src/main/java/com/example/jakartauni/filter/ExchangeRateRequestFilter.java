@@ -13,7 +13,6 @@ import java.time.format.DateTimeParseException;
 
 @Provider
 public class ExchangeRateRequestFilter implements ContainerRequestFilter {
-
     private static final String DATE_PATTERN = "yyyy-MM-dd";
     private static final DateTimeFormatter DATE_FORMATTER =
             DateTimeFormatter.ofPattern(DATE_PATTERN);
