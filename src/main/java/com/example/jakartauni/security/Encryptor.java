@@ -1,4 +1,4 @@
-package com.example.jakartauni.encrypt;
+package com.example.jakartauni.security;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
