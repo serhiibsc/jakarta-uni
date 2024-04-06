@@ -18,8 +18,8 @@ public class UserService {
     public void createDefaultAdmin() {
         User admin = User.builder()
                 .id(1L)
-                .login("jaka-admin")
-                .password(Encryptor.encryptSha256("pass"))
+                .login("admin")
+                .password(Encryptor.encryptSha256("admin"))
                 .role(User.UserRole.ADMIN)
                 .build();
         userRepository.create(admin);

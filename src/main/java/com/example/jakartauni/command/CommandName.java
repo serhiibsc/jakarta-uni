@@ -1,7 +1,7 @@
 package com.example.jakartauni.command;
 
 public enum CommandName {
-    LOGIN,
+    J_SECURITY_CHECK,
     LOGIN_PAGE,
     LOGOUT,
     MAIN_PAGE,

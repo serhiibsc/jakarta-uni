@@ -22,19 +22,18 @@
             </div>
         </c:if>
     </div>
-    <form action="${pageContext.request.contextPath}/controller" method="post" class="mx-auto"
+    <form action="j_security_check" method="post" class="mx-auto"
           style="max-width: 480px;">
-        <input type="hidden" name="command" value="login">
         <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
 
         <div class="form-group">
             <label for="username" class="mb-1">Username</label>
-            <input type="text" id="username" class="form-control mb-1" placeholder="..." name="username" required autofocus>
+            <input type="text" id="username" class="form-control mb-1" placeholder="..." name="j_username" required autofocus>
         </div>
 
         <div class="form-group">
             <label for="password" class="mb-1">Password</label>
-            <input type="password" id="password" class="form-control mb-1" placeholder="..." name="password" required
+            <input type="password" id="password" class="form-control mb-1" placeholder="..." name="j_password" required
                    autocomplete="off">
         </div>
 
