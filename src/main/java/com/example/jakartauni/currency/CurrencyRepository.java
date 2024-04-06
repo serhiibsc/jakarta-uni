@@ -14,6 +14,21 @@ public class CurrencyRepository {
     @PersistenceContext(unitName = "myPU")
     private EntityManager entityManager;
 
+    public void saveTestTransaction(Currency currency) {
+        if (currency.getId() == null || find(currency.getId()).isEmpty()) {
+            entityManager.persist(currency);
+            currency.setName("23");
+            saveAndCommitInBoundsOfOneTransaction(currency);
+        }
+        if (true) {
+            throw new IllegalStateException();
+        }
+    }
+
+    public void saveAndCommitInBoundsOfOneTransaction(Currency currency) {
+        entityManager.persist(currency);
+    }
+
     public void save(Currency currency) {
         if (currency.getId() == null || find(currency.getId()).isEmpty()) {
             entityManager.persist(currency);

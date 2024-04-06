@@ -16,6 +16,11 @@ public class CurrencyService {
         currencyRepository.save(currency);
     }
 
+    public void transactionTest(Currency currency) {
+        currency.setId(null);
+        currencyRepository.saveTestTransaction(currency);
+    }
+
     public void deleteCurrency(Currency currency) {
         currencyRepository.delete(currency.getId());
     }
