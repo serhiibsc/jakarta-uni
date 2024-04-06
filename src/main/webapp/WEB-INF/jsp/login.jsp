@@ -8,11 +8,11 @@
 <%@ include file="/WEB-INF/jspf/header.jspf" %>
 <div class="text-center mt-5">
     <div class="container message" style="max-width: 480px;margin: auto">
-        <c:if test="${not empty errorMessage}">
+        <c:if test="${not empty sessionScope.login_error_message}">
             <div class="alert alert-danger alert-dismissible fade show mt-2 d-flex justify-content-between"
                  role="alert">
                 <div class="left">
-                    <c:out value="${errorMessage}"/>
+                    <c:out value="${sessionScope.login_error_message}"/>
                 </div>
                 <div class="right">
             <span class="close" data-dismiss="alert" aria-label="Close">
