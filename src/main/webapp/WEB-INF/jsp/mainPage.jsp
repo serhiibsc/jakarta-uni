@@ -11,10 +11,11 @@
     <table class="table-bordered">
         <thead>
         <tr>
-            <th>Source Currency</th>
-            <th>Source Unit</th>
-            <th>Target Unit</th>
-            <th>Target Currency</th>
+            <th style="font-size: 18px; padding: 16px 32px; text-align: center">Source Currency</th>
+            <th style="font-size: 18px; padding: 16px 32px; text-align: center">Source Unit</th>
+            <th style="font-size: 18px; padding: 16px 32px; text-align: center">Target Unit</th>
+            <th style="font-size: 18px; padding: 16px 32px; text-align: center">Target Currency</th>
+            <th style="font-size: 18px; padding: 16px 32px; text-align: center">Detailed Information</th>
         </tr>
         </thead>
         <tbody>
@@ -23,34 +24,39 @@
                 <td>
                     <c:choose>
                         <c:when test="${exchangeRate.rate >= 1}">
-                        <span style="color:green">
+                        <span style="font-size: 16px; padding: 16px 32px; text-align: center; color:green">
                             <c:out value="${exchangeRate.sourceCurrency.name}"/>
                         </span>
                         </c:when>
                         <c:otherwise>
-                        <span style="color:red">
+                        <span style="font-size: 16px; padding: 16px 32px; text-align: center; color:red">
                             <c:out value="${exchangeRate.sourceCurrency.name}"/>
                         </span>
                         </c:otherwise>
                     </c:choose>
                 </td>
-                <td>1</td>
-                <td>
+                <td style="font-size: 16px; padding: 16px 32px; text-align: center">1</td>
+                <td style="font-size: 16px; padding: 16px 32px; text-align: center">
                     <c:out value="${exchangeRate.rate}"/>
                 </td>
                 <td>
                     <c:choose>
                         <c:when test="${exchangeRate.rate < 1}">
-                        <span style="color:green">
+                        <span style="font-size: 16px; padding: 16px 32px; text-align: center; color:green">
                             <c:out value="${exchangeRate.targetCurrency.name}"/>
                         </span>
                         </c:when>
                         <c:otherwise>
-                        <span style="color:red">
+                        <span style="font-size: 16px; padding: 16px 32px; text-align: center; color:red">
                             <c:out value="${exchangeRate.targetCurrency.name}"/>
                         </span>
                         </c:otherwise>
                     </c:choose>
+                </td>
+                <td style="font-size: 16px; padding: 16px 32px; text-align: center">
+                    <a href="${pageContext.request.contextPath}/controller?command=EXCHANGE_RATE_PERIOD&source=${exchangeRate.sourceCurrency.abbreviation}&target=${exchangeRate.targetCurrency.abbreviation}&startDate=2024-03-01&endDate=2024-03-20" style="color: black">
+                        Get info
+                    </a>
                 </td>
             </tr>
         </c:forEach>
