@@ -54,7 +54,7 @@
                     </c:choose>
                 </td>
                 <td style="font-size: 16px; padding: 16px 32px; text-align: center">
-                    <a href="${pageContext.request.contextPath}/controller?command=EXCHANGE_RATE_PERIOD&source=${exchangeRate.sourceCurrency.abbreviation}&target=${exchangeRate.targetCurrency.abbreviation}&startDate=2024-03-01&endDate=2024-03-20" style="color: black">
+                    <a href="${pageContext.request.contextPath}/controller?command=EXCHANGE_RATE_PERIOD&source=${exchangeRate.sourceCurrency.abbreviation}&target=${exchangeRate.targetCurrency.abbreviation}&startDate=${startDate}&endDate=${endDate}" style="color: black">
                         Get info
                     </a>
                 </td>
