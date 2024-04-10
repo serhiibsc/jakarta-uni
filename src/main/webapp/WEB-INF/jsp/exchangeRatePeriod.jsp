@@ -202,6 +202,8 @@
         dataArray.push(object);
     }
 
+    dataArray.sort((a, b) => new Date(a.date) - new Date(b.date));
+
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
