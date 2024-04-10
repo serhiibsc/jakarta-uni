@@ -1,5 +1,6 @@
-package com.example.jakartauni.user;
+package com.example.jakartauni.repository;
 
+import com.example.jakartauni.entity.User;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;

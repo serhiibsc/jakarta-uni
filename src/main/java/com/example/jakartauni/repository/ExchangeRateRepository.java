@@ -1,5 +1,6 @@
-package com.example.jakartauni.exchangerate;
+package com.example.jakartauni.repository;
 
+import com.example.jakartauni.entity.ExchangeRate;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -44,6 +45,18 @@ public class ExchangeRateRepository {
                 "WHERE e.date BETWEEN :startDate AND :endDate", ExchangeRate.class);
         query.setParameter("startDate", startDate);
         query.setParameter("endDate", endDate);
+        return query.getResultList();
+    }
+
+    public List<ExchangeRate> findPairs(String sourceCurrencyName, String targetCurrencyName) {
+        TypedQuery<ExchangeRate> query = entityManager.createQuery(
+                "SELECT e FROM ExchangeRate e " +
+                        "JOIN e.sourceCurrency source " +
+                        "JOIN e.targetCurrency target " +
+                        "WHERE source.name = :sourceName AND target.name = :targetName",
+                ExchangeRate.class);
+        query.setParameter("sourceName", sourceCurrencyName);
+        query.setParameter("targetName", targetCurrencyName);
         return query.getResultList();
     }
 

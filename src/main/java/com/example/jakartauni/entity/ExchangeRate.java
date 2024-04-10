@@ -1,6 +1,5 @@
-package com.example.jakartauni.exchangerate;
+package com.example.jakartauni.entity;
 
-import com.example.jakartauni.currency.Currency;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

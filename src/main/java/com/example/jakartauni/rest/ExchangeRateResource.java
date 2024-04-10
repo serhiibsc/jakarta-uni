@@ -1,9 +1,9 @@
 package com.example.jakartauni.rest;
 
-import com.example.jakartauni.currency.Currency;
-import com.example.jakartauni.currency.CurrencyService;
-import com.example.jakartauni.exchangerate.ExchangeRate;
-import com.example.jakartauni.exchangerate.ExchangeRateService;
+import com.example.jakartauni.entity.Currency;
+import com.example.jakartauni.service.CurrencyService;
+import com.example.jakartauni.entity.ExchangeRate;
+import com.example.jakartauni.service.ExchangeRateService;
 import com.example.jakartauni.rest.dto.ExchangeRateDto;
 import com.example.jakartauni.rest.dto.ResponseMessageDto;
 import jakarta.ejb.EJB;
@@ -15,6 +15,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Path("/exchange-rate")
@@ -44,6 +45,18 @@ public class ExchangeRateResource {
             String message = String.format("Currency with abbreviation [%s] does not exists.",
                     exchangeRateDto.getTargetCurrencyAbbreviation());
             ResponseMessageDto messageDto = ResponseMessageDto.builder().message(message).build();
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity(messageDto)
+                    .build();
+        }
+        if (Objects.isNull(exchangeRateDto.getDate())) {
+            ResponseMessageDto messageDto = ResponseMessageDto.builder().message("Date shouldn't be null.").build();
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity(messageDto)
+                    .build();
+        }
+        if (Objects.isNull(exchangeRateDto.getRate())) {
+            ResponseMessageDto messageDto = ResponseMessageDto.builder().message("Rate shouldn't be null.").build();
             return Response.status(Response.Status.BAD_REQUEST)
                     .entity(messageDto)
                     .build();

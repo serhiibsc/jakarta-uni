@@ -2,10 +2,10 @@ package com.example.jakartauni.command.concretecommand;
 
 import com.example.jakartauni.command.Command;
 import com.example.jakartauni.command.CommandName;
-import com.example.jakartauni.currency.Currency;
-import com.example.jakartauni.currency.CurrencyService;
-import com.example.jakartauni.exchangerate.ExchangeRate;
-import com.example.jakartauni.exchangerate.ExchangeRateService;
+import com.example.jakartauni.entity.Currency;
+import com.example.jakartauni.service.CurrencyService;
+import com.example.jakartauni.entity.ExchangeRate;
+import com.example.jakartauni.service.ExchangeRateService;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
 import jakarta.servlet.ServletException;

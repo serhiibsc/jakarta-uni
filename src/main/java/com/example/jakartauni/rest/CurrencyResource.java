@@ -1,14 +1,17 @@
 package com.example.jakartauni.rest;
 
-import com.example.jakartauni.currency.Currency;
-import com.example.jakartauni.currency.CurrencyService;
+import com.example.jakartauni.entity.Currency;
 import com.example.jakartauni.rest.dto.ResponseMessageDto;
+import com.example.jakartauni.service.CurrencyService;
 import jakarta.ejb.EJB;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.SecurityContext;
+
+import java.security.Principal;
+import java.util.Objects;
 
 @Path("/currency")
 public class CurrencyResource {
@@ -40,8 +43,7 @@ public class CurrencyResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response addCurrency(Currency currency) {
-        boolean isAdmin = securityContext.getUserPrincipal().getName().equals("admin");
-        if (!isAdmin) {
+        if (isUnauthorized()) {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
         if (currencyService.findCurrencyByName(currency.getName()).isPresent()) {
@@ -70,8 +72,7 @@ public class CurrencyResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateCurrency(@PathParam("id") Long id, Currency updatedCurrency) {
-        boolean isAdmin = securityContext.getUserPrincipal().getName().equals("admin");
-        if (!isAdmin) {
+        if (isUnauthorized()) {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
         if (updatedCurrency.getName() == null || updatedCurrency.getAbbreviation() == null) {
@@ -94,8 +95,7 @@ public class CurrencyResource {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deleteCurrency(@PathParam("id") Long id) {
-        boolean isAdmin = securityContext.getUserPrincipal().getName().equals("admin");
-        if (!isAdmin) {
+        if (isUnauthorized()) {
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
         return currencyService.findCurrencyById(id)
@@ -105,6 +105,11 @@ public class CurrencyResource {
                 })
                 .orElse(responseCurrencyNotFound(id))
                 .build();
+    }
+
+    private boolean isUnauthorized() {
+        Principal principal = securityContext.getUserPrincipal();
+        return !Objects.nonNull(principal) || !principal.getName().equals("admin");
     }
 
     private static Response.ResponseBuilder responseCurrencyNotFound(Long currencyId) {

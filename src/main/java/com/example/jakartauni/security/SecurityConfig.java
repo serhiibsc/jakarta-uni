@@ -7,4 +7,4 @@ import jakarta.security.enterprise.authentication.mechanism.http.LoginToContinue
 @FormAuthenticationMechanismDefinition(
         loginToContinue = @LoginToContinue)
 @ApplicationScoped
-public class AppConfig{}
+public class SecurityConfig {}

@@ -1,7 +1,7 @@
 package com.example.jakartauni.security;
 
-import com.example.jakartauni.user.User;
-import com.example.jakartauni.user.UserService;
+import com.example.jakartauni.entity.User;
+import com.example.jakartauni.service.UserService;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Default;
 import jakarta.inject.Inject;

@@ -1,11 +1,11 @@
 package com.example.jakartauni;
 
-import com.example.jakartauni.currency.Currency;
-import com.example.jakartauni.currency.CurrencyService;
-import com.example.jakartauni.exchangerate.ExchangeRate;
-import com.example.jakartauni.exchangerate.ExchangeRateService;
-import com.example.jakartauni.user.User;
-import com.example.jakartauni.user.UserService;
+import com.example.jakartauni.entity.Currency;
+import com.example.jakartauni.service.CurrencyService;
+import com.example.jakartauni.entity.ExchangeRate;
+import com.example.jakartauni.service.ExchangeRateService;
+import com.example.jakartauni.entity.User;
+import com.example.jakartauni.service.UserService;
 import jakarta.annotation.PostConstruct;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Singleton;

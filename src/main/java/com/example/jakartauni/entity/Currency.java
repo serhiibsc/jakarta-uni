@@ -1,4 +1,4 @@
-package com.example.jakartauni.currency;
+package com.example.jakartauni.entity;
 
 
 import jakarta.persistence.*;

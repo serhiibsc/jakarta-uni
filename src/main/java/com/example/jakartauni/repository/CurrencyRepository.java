@@ -1,15 +1,18 @@
-package com.example.jakartauni.currency;
+package com.example.jakartauni.repository;
 
+import com.example.jakartauni.entity.Currency;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
+import jakarta.transaction.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 @Stateless
+@Transactional
 public class CurrencyRepository {
     @PersistenceContext(unitName = "myPU")
     private EntityManager entityManager;
@@ -52,7 +55,14 @@ public class CurrencyRepository {
     }
 
     public void delete(Long currencyId) {
-        find(currencyId).ifPresent(currency -> entityManager.remove(currency));
+        find(currencyId).ifPresent(currency -> {
+            if (entityManager.contains(currency)) {
+                entityManager.remove(currency);
+            } else {
+                Currency managedCurrency = entityManager.merge(currency);
+                entityManager.remove(managedCurrency);
+            }
+        });
     }
 
     public Optional<Currency> findByName(String currencyName) {

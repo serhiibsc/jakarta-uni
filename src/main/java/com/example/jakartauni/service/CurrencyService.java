@@ -1,5 +1,7 @@
-package com.example.jakartauni.currency;
+package com.example.jakartauni.service;
 
+import com.example.jakartauni.entity.Currency;
+import com.example.jakartauni.repository.CurrencyRepository;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
 

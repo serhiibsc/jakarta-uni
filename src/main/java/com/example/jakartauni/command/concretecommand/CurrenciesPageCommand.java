@@ -3,7 +3,7 @@ package com.example.jakartauni.command.concretecommand;
 
 import com.example.jakartauni.command.Command;
 import com.example.jakartauni.command.CommandName;
-import com.example.jakartauni.currency.CurrencyService;
+import com.example.jakartauni.service.CurrencyService;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
 import jakarta.servlet.ServletException;

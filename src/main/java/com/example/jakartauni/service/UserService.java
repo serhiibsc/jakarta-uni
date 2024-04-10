@@ -1,6 +1,8 @@
-package com.example.jakartauni.user;
+package com.example.jakartauni.service;
 
 import com.example.jakartauni.security.Encryptor;
+import com.example.jakartauni.entity.User;
+import com.example.jakartauni.repository.UserRepository;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
 
